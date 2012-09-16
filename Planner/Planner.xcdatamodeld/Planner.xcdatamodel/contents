@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1171" systemVersion="11E53" minimumToolsVersion="Xcode 4.1" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Goal" representedClassName="Goal" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="isComplete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="schedule" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Schedule" inverseName="ownerSchedule" inverseEntity="Schedule" syncable="YES"/>
+        <relationship name="subTasks" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Task" inverseName="ownerTask" inverseEntity="Task" syncable="YES"/>
+    </entity>
+    <entity name="Schedule" representedClassName="Schedule" syncable="YES">
+        <attribute name="endDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="eventPadding" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="maxEventTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="maxNoOfEventsPerDay" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="maxNoOfEventsPerWeek" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="minEventTime" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="reminderBeforeEventStart" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="scheduleOnWeekdays" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="scheduleOnWeekends" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="ownerSchedule" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="schedule" inverseEntity="Goal" syncable="YES"/>
+        <relationship name="timeslots" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="TimeSlot" inverseName="ownerSchedule" inverseEntity="TimeSlot" syncable="YES"/>
+    </entity>
+    <entity name="Task" representedClassName="Task" parentEntity="Goal" syncable="YES">
+        <attribute name="hasOrderIndependentSubTasks" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="hasSubtasks" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="taskDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="time" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="ownerTask" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Goal" inverseName="subTasks" inverseEntity="Goal" syncable="YES"/>
+    </entity>
+    <entity name="TimeSlot" representedClassName="TimeSlot" syncable="YES">
+        <attribute name="endTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="ownerSchedule" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Schedule" inverseName="timeslots" inverseEntity="Schedule" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Goal" positionX="180" positionY="117" width="128" height="120"/>
+        <element name="Schedule" positionX="477" positionY="99" width="128" height="225"/>
+        <element name="Task" positionX="189" positionY="342" width="218" height="120"/>
+        <element name="TimeSlot" positionX="520" positionY="486" width="128" height="90"/>
+    </elements>
+</model>
