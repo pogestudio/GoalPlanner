@@ -14,7 +14,24 @@
 		A346F11515FA98FB00745D9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A346F11415FA98FB00745D9D /* main.m */; };
 		A346F11915FA98FB00745D9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A346F11815FA98FB00745D9D /* AppDelegate.m */; };
 		A346F11C15FA98FB00745D9D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A346F11A15FA98FB00745D9D /* MainStoryboard.storyboard */; };
-		A346F11F15FA98FB00745D9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A346F11E15FA98FB00745D9D /* ViewController.m */; };
+		A346F12615FA990C00745D9D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A346F12515FA990C00745D9D /* CoreData.framework */; };
+		A3BCEB9E160336E500B797CD /* SwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEB9D160336E500B797CD /* SwitchControlCell.m */; };
+		A3BCEBA216033A8800B797CD /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBA116033A8800B797CD /* CoreDataTableViewController.m */; };
+		A3BCEBA51603405F00B797CD /* ListTasksVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBA41603405F00B797CD /* ListTasksVC.m */; };
+		A3BCEBA9160341B800B797CD /* TaskCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBA8160341B800B797CD /* TaskCell.m */; };
+		A3BCEBAC1603551600B797CD /* Planner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBAA1603551500B797CD /* Planner.xcdatamodeld */; };
+		A3BCEBB01603564400B797CD /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBAF1603564400B797CD /* ScheduleCell.m */; };
+		A3BCEBB4160361E000B797CD /* ListGoalsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBB3160361E000B797CD /* ListGoalsVC.m */; };
+		A3C9CEFC1605FB8B002B6CFA /* TempDatabaseBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CEFB1605FB8B002B6CFA /* TempDatabaseBuilder.m */; };
+		A3C9CF1C16063175002B6CFA /* Goal+addTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF1B16063175002B6CFA /* Goal+addTasks.m */; };
+		A3C9CF231606556C002B6CFA /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF221606556C002B6CFA /* Goal.m */; };
+		A3C9CF261606556D002B6CFA /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF251606556D002B6CFA /* Schedule.m */; };
+		A3C9CF291606556D002B6CFA /* TimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF281606556D002B6CFA /* TimeSlot.m */; };
+		A3C9CF2C1606556D002B6CFA /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF2B1606556D002B6CFA /* Task.m */; };
+		A3E102701602787C00EED9A8 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1026F1602787C00EED9A8 /* TaskViewController.m */; };
+		A3E10276160280AB00EED9A8 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E10275160280AB00EED9A8 /* TitleCell.m */; };
+		A3E1027916028BFA00EED9A8 /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1027816028BFA00EED9A8 /* DescriptionCell.m */; };
+		A3E1027D160295C200EED9A8 /* TimeRequiredCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1027C160295C200EED9A8 /* TimeRequiredCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,15 +39,47 @@
 		A346F10815FA98FB00745D9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A346F10A15FA98FB00745D9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A346F10C15FA98FB00745D9D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A346F11015FA98FB00745D9D /* Planner-Info.plist */ = {isa = PBXFileReference; path = "Planner-Info.plist"; sourceTree = "<group>"; };
+		A346F11015FA98FB00745D9D /* Planner-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Planner-Info.plist"; sourceTree = "<group>"; };
 		A346F11215FA98FB00745D9D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A346F11415FA98FB00745D9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A346F11615FA98FB00745D9D /* Planner-Prefix.pch */ = {isa = PBXFileReference; path = "Planner-Prefix.pch"; sourceTree = "<group>"; };
-		A346F11715FA98FB00745D9D /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		A346F11615FA98FB00745D9D /* Planner-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Planner-Prefix.pch"; sourceTree = "<group>"; };
+		A346F11715FA98FB00745D9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A346F11815FA98FB00745D9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A346F11B15FA98FB00745D9D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		A346F11D15FA98FB00745D9D /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
-		A346F11E15FA98FB00745D9D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		A346F12515FA990C00745D9D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A3BCEB9C160336E500B797CD /* SwitchControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchControlCell.h; sourceTree = "<group>"; };
+		A3BCEB9D160336E500B797CD /* SwitchControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchControlCell.m; sourceTree = "<group>"; };
+		A3BCEBA016033A8800B797CD /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
+		A3BCEBA116033A8800B797CD /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataTableViewController.m; sourceTree = "<group>"; };
+		A3BCEBA31603405E00B797CD /* ListTasksVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListTasksVC.h; sourceTree = "<group>"; };
+		A3BCEBA41603405F00B797CD /* ListTasksVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTasksVC.m; sourceTree = "<group>"; };
+		A3BCEBA7160341B800B797CD /* TaskCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskCell.h; sourceTree = "<group>"; };
+		A3BCEBA8160341B800B797CD /* TaskCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskCell.m; sourceTree = "<group>"; };
+		A3BCEBAB1603551600B797CD /* Planner.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Planner.xcdatamodel; sourceTree = "<group>"; };
+		A3BCEBAE1603564400B797CD /* ScheduleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleCell.h; sourceTree = "<group>"; };
+		A3BCEBAF1603564400B797CD /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCell.m; sourceTree = "<group>"; };
+		A3BCEBB2160361E000B797CD /* ListGoalsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListGoalsVC.h; sourceTree = "<group>"; };
+		A3BCEBB3160361E000B797CD /* ListGoalsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListGoalsVC.m; sourceTree = "<group>"; };
+		A3C9CEFA1605FB8B002B6CFA /* TempDatabaseBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempDatabaseBuilder.h; sourceTree = "<group>"; };
+		A3C9CEFB1605FB8B002B6CFA /* TempDatabaseBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempDatabaseBuilder.m; sourceTree = "<group>"; };
+		A3C9CF1A16063175002B6CFA /* Goal+addTasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Goal+addTasks.h"; sourceTree = "<group>"; };
+		A3C9CF1B16063175002B6CFA /* Goal+addTasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Goal+addTasks.m"; sourceTree = "<group>"; };
+		A3C9CF211606556C002B6CFA /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
+		A3C9CF221606556C002B6CFA /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
+		A3C9CF241606556D002B6CFA /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		A3C9CF251606556D002B6CFA /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		A3C9CF271606556D002B6CFA /* TimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSlot.h; sourceTree = "<group>"; };
+		A3C9CF281606556D002B6CFA /* TimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeSlot.m; sourceTree = "<group>"; };
+		A3C9CF2A1606556D002B6CFA /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		A3C9CF2B1606556D002B6CFA /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		A3E1026E1602787C00EED9A8 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
+		A3E1026F1602787C00EED9A8 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
+		A3E10274160280AB00EED9A8 /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
+		A3E10275160280AB00EED9A8 /* TitleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
+		A3E1027716028BFA00EED9A8 /* DescriptionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DescriptionCell.h; sourceTree = "<group>"; };
+		A3E1027816028BFA00EED9A8 /* DescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionCell.m; sourceTree = "<group>"; };
+		A3E1027B160295C200EED9A8 /* TimeRequiredCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRequiredCell.h; sourceTree = "<group>"; };
+		A3E1027C160295C200EED9A8 /* TimeRequiredCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRequiredCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A346F12615FA990C00745D9D /* CoreData.framework in Frameworks */,
 				A346F10915FA98FB00745D9D /* UIKit.framework in Frameworks */,
 				A346F10B15FA98FB00745D9D /* Foundation.framework in Frameworks */,
 				A346F10D15FA98FB00745D9D /* CoreGraphics.framework in Frameworks */,
@@ -50,6 +100,7 @@
 		A346F0F915FA98FB00745D9D = {
 			isa = PBXGroup;
 			children = (
+				A346F12515FA990C00745D9D /* CoreData.framework */,
 				A346F10E15FA98FB00745D9D /* Planner */,
 				A346F10715FA98FB00745D9D /* Frameworks */,
 				A346F10515FA98FB00745D9D /* Products */,
@@ -77,11 +128,11 @@
 		A346F10E15FA98FB00745D9D /* Planner */ = {
 			isa = PBXGroup;
 			children = (
+				A3BCEBAD1603552200B797CD /* CoreDataStuff */,
+				A3E1027216027F9300EED9A8 /* Views */,
 				A346F11715FA98FB00745D9D /* AppDelegate.h */,
 				A346F11815FA98FB00745D9D /* AppDelegate.m */,
 				A346F11A15FA98FB00745D9D /* MainStoryboard.storyboard */,
-				A346F11D15FA98FB00745D9D /* ViewController.h */,
-				A346F11E15FA98FB00745D9D /* ViewController.m */,
 				A346F10F15FA98FB00745D9D /* Supporting Files */,
 			);
 			path = Planner;
@@ -96,6 +147,85 @@
 				A346F11615FA98FB00745D9D /* Planner-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3BCEBA61603419500B797CD /* ListTasks */ = {
+			isa = PBXGroup;
+			children = (
+				A3BCEBA31603405E00B797CD /* ListTasksVC.h */,
+				A3BCEBA41603405F00B797CD /* ListTasksVC.m */,
+				A3BCEBA7160341B800B797CD /* TaskCell.h */,
+				A3BCEBA8160341B800B797CD /* TaskCell.m */,
+			);
+			name = ListTasks;
+			sourceTree = "<group>";
+		};
+		A3BCEBAD1603552200B797CD /* CoreDataStuff */ = {
+			isa = PBXGroup;
+			children = (
+				A3BCEBAA1603551500B797CD /* Planner.xcdatamodeld */,
+				A3C9CF1A16063175002B6CFA /* Goal+addTasks.h */,
+				A3C9CF1B16063175002B6CFA /* Goal+addTasks.m */,
+				A3C9CF211606556C002B6CFA /* Goal.h */,
+				A3C9CF221606556C002B6CFA /* Goal.m */,
+				A3C9CF241606556D002B6CFA /* Schedule.h */,
+				A3C9CF251606556D002B6CFA /* Schedule.m */,
+				A3C9CF271606556D002B6CFA /* TimeSlot.h */,
+				A3C9CF281606556D002B6CFA /* TimeSlot.m */,
+				A3C9CF2A1606556D002B6CFA /* Task.h */,
+				A3C9CF2B1606556D002B6CFA /* Task.m */,
+			);
+			name = CoreDataStuff;
+			sourceTree = "<group>";
+		};
+		A3BCEBB1160361CC00B797CD /* ListGoals */ = {
+			isa = PBXGroup;
+			children = (
+				A3BCEBB2160361E000B797CD /* ListGoalsVC.h */,
+				A3BCEBB3160361E000B797CD /* ListGoalsVC.m */,
+			);
+			name = ListGoals;
+			sourceTree = "<group>";
+		};
+		A3E1027216027F9300EED9A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A3BCEBA016033A8800B797CD /* CoreDataTableViewController.h */,
+				A3BCEBA116033A8800B797CD /* CoreDataTableViewController.m */,
+				A3BCEBB1160361CC00B797CD /* ListGoals */,
+				A3BCEBA61603419500B797CD /* ListTasks */,
+				A3E1027316027FBE00EED9A8 /* Configure Tasks */,
+				A3C9CEFA1605FB8B002B6CFA /* TempDatabaseBuilder.h */,
+				A3C9CEFB1605FB8B002B6CFA /* TempDatabaseBuilder.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A3E1027316027FBE00EED9A8 /* Configure Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				A3E1027A16028C0000EED9A8 /* Cells */,
+				A3E1026E1602787C00EED9A8 /* TaskViewController.h */,
+				A3E1026F1602787C00EED9A8 /* TaskViewController.m */,
+			);
+			name = "Configure Tasks";
+			sourceTree = "<group>";
+		};
+		A3E1027A16028C0000EED9A8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A3E10274160280AB00EED9A8 /* TitleCell.h */,
+				A3E10275160280AB00EED9A8 /* TitleCell.m */,
+				A3E1027716028BFA00EED9A8 /* DescriptionCell.h */,
+				A3E1027816028BFA00EED9A8 /* DescriptionCell.m */,
+				A3E1027B160295C200EED9A8 /* TimeRequiredCell.h */,
+				A3E1027C160295C200EED9A8 /* TimeRequiredCell.m */,
+				A3BCEB9C160336E500B797CD /* SwitchControlCell.h */,
+				A3BCEB9D160336E500B797CD /* SwitchControlCell.m */,
+				A3BCEBAE1603564400B797CD /* ScheduleCell.h */,
+				A3BCEBAF1603564400B797CD /* ScheduleCell.m */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,7 +292,23 @@
 			files = (
 				A346F11515FA98FB00745D9D /* main.m in Sources */,
 				A346F11915FA98FB00745D9D /* AppDelegate.m in Sources */,
-				A346F11F15FA98FB00745D9D /* ViewController.m in Sources */,
+				A3E102701602787C00EED9A8 /* TaskViewController.m in Sources */,
+				A3E10276160280AB00EED9A8 /* TitleCell.m in Sources */,
+				A3E1027916028BFA00EED9A8 /* DescriptionCell.m in Sources */,
+				A3E1027D160295C200EED9A8 /* TimeRequiredCell.m in Sources */,
+				A3BCEB9E160336E500B797CD /* SwitchControlCell.m in Sources */,
+				A3BCEBA216033A8800B797CD /* CoreDataTableViewController.m in Sources */,
+				A3BCEBA51603405F00B797CD /* ListTasksVC.m in Sources */,
+				A3BCEBA9160341B800B797CD /* TaskCell.m in Sources */,
+				A3BCEBAC1603551600B797CD /* Planner.xcdatamodeld in Sources */,
+				A3BCEBB01603564400B797CD /* ScheduleCell.m in Sources */,
+				A3BCEBB4160361E000B797CD /* ListGoalsVC.m in Sources */,
+				A3C9CEFC1605FB8B002B6CFA /* TempDatabaseBuilder.m in Sources */,
+				A3C9CF1C16063175002B6CFA /* Goal+addTasks.m in Sources */,
+				A3C9CF231606556C002B6CFA /* Goal.m in Sources */,
+				A3C9CF261606556D002B6CFA /* Schedule.m in Sources */,
+				A3C9CF291606556D002B6CFA /* TimeSlot.m in Sources */,
+				A3C9CF2C1606556D002B6CFA /* Task.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,8 +420,22 @@
 				A346F12415FA98FB00745D9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3BCEBAA1603551500B797CD /* Planner.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3BCEBAB1603551600B797CD /* Planner.xcdatamodel */,
+			);
+			currentVersion = A3BCEBAB1603551600B797CD /* Planner.xcdatamodel */;
+			path = Planner.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A346F0FB15FA98FB00745D9D /* Project object */;
 }

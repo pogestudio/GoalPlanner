@@ -3,6 +3,7 @@
     <entity name="Goal" representedClassName="Goal" syncable="YES">
         <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="isComplete" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="sortKey" optional="YES" attributeType="Integer 16" minValueString="0" defaultValueString="0" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="schedule" optional="YES" minCount="1" maxCount="1" deletionRule="Cascade" destinationEntity="Schedule" inverseName="ownerSchedule" inverseEntity="Schedule" syncable="YES"/>
         <relationship name="subTasks" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Task" inverseName="ownerTask" inverseEntity="Task" syncable="YES"/>
@@ -34,7 +35,7 @@
         <relationship name="ownerSchedule" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Schedule" inverseName="timeslots" inverseEntity="Schedule" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Goal" positionX="180" positionY="117" width="128" height="120"/>
+        <element name="Goal" positionX="180" positionY="117" width="128" height="135"/>
         <element name="Schedule" positionX="477" positionY="99" width="128" height="225"/>
         <element name="Task" positionX="189" positionY="342" width="218" height="120"/>
         <element name="TimeSlot" positionX="520" positionY="486" width="128" height="90"/>
