@@ -8,21 +8,39 @@
 
 #import "ListTasksVC.h"
 #import "TaskCell.h"
+#import "TaskHandler.h"
 
-#import "Goal.h"
-#import "Task.h"
+#import "Task+helper.h"
+#import "TaskToolbar.h"
+
+
+//VCS
+#import "TaskViewController.h"
+#import "ManageTaskPlanningVC.h"
 
 @interface ListTasksVC ()
 -(void)executeFetchRequest;
+-(void)sortObjects;
 @end
 
 @implementation ListTasksVC
 
 @synthesize parentTask;
+@synthesize taskHandler;
+@synthesize managedObjectContext;
+@synthesize shouldShowDeletion;
+@synthesize toolbar;
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self executeFetchRequest];
+    [super viewWillAppear:animated];
+    
+    [self.taskHandler fillTaskHandler];
+    [self layoutSubviewsForAllVisibleCellsInTableviewWithAnimation:NO];
+    self.shouldShowDeletion = NO;
+    
+    //self.tableView.editing = YES;
+    
 }
 
 - (void)viewDidLoad
@@ -33,7 +51,12 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.taskHandler = [[TaskHandler alloc] initForTableView:self.tableView];
+    self.taskHandler.theHeadTask = self.parentTask;
+    self.taskHandler.managedObjectContext = self.managedObjectContext;
+
 }
 
 - (void)viewDidUnload
@@ -50,24 +73,6 @@
 
 #pragma mark - Table view data source
 
--(void)executeFetchRequest
-{
-    
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"sortKey" ascending:NO];
-    
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Task"];
-    [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
-    
-    NSPredicate *fetchPred = [NSPredicate predicateWithFormat:@"ownerTask == %@",self.parentTask];
-    fetchRequest.predicate = fetchPred;
-    
-    
-    NSFetchedResultsController *fetchContr = [[NSFetchedResultsController alloc] initWithFetchRequest:fetchRequest managedObjectContext:self.managedObjectContext sectionNameKeyPath:nil cacheName:nil];
-    
-    self.fetchedResultsController = fetchContr;
-
-}
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -76,7 +81,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
 
-    NSInteger numberOfObjects = [[self.fetchedResultsController fetchedObjects] count];
+    NSInteger numberOfObjects = [self.taskHandler.tasksForTableView count];
     return numberOfObjects;
 }
 
@@ -85,22 +90,41 @@
     static NSString *CellIdentifier = @"TaskCell";
     TaskCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    Task *taskForRow = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.titleLabel.text = taskForRow.title;
-    
-    // Configure the cell...
+    [self setUpCell:cell forIndexPath:indexPath];
     
     return cell;
 }
 
-/*
+-(void)setUpCell:(TaskCell*)cell forIndexPath:(NSIndexPath*)indexPath
+{
+    //NSLog(@"setUpCell, row:%d",indexPath.row);
+    //NSLog(@"setUpCell, tasksForTableView count: %d",[self.taskHandler.tasksForTableView count]);
+          
+    Task *taskForRow = [self.taskHandler objectAtIndexPath:indexPath];
+    
+    [cell setUpcellWithTask:taskForRow andParentTask:self.parentTask];
+    
+    //add delegate so that we can update subviews of all visible cells when changes are made
+    cell.showsReorderControl = YES;
+    cell.taskDelegate = self;
+    cell.taskHandler = self.taskHandler;
+}
+
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"Edit Task" sender:self];
+}
+
+#pragma mark -
+#pragma mark TableView Editing
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
 /*
 // Override to support editing the table view.
@@ -116,33 +140,124 @@
 }
 */
 
-/*
+-(UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.shouldShowDeletion) {
+        return UITableViewCellEditingStyleDelete;
+    } else {
+        return UITableViewCellEditingStyleNone;
+    }
+    
+}
+
+
 // Override to support rearranging the table view.
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
 {
+    [self.taskHandler changeObjectFrom:fromIndexPath to:toIndexPath];
 }
-*/
 
-/*
+
 // Override to support conditional rearranging of the table view.
 - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Return NO if you do not want the item to be re-orderable.
     return YES;
 }
-*/
 
-#pragma mark - Table view delegate
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+-(BOOL)tableView:(UITableView *)tableView shouldIndentWhileEditingRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // Navigation logic may go here. Create and push another view controller.
-    /*
-     <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:@"<#Nib name#>" bundle:nil];
-     // ...
-     // Pass the selected object to the new view controller.
-     [self.navigationController pushViewController:detailViewController animated:YES];
-     */
+    return NO;
 }
+
+- (NSIndexPath *)tableView:(UITableView *)tableView targetIndexPathForMoveFromRowAtIndexPath:(NSIndexPath *)sourceIndexPath toProposedIndexPath:(NSIndexPath *)proposedDestinationIndexPath
+{
+    Task *taskAtCell = [self.taskHandler.tasksForTableView objectAtIndex:sourceIndexPath.row];
+    NSUInteger cellIndentation = [self.taskHandler indentationForCellAtIndexPath:sourceIndexPath];
+    NSUInteger indentationUntilScreenOutOfBounds = self.taskHandler.depthToShow - cellIndentation;
+    NSArray *arrayOfSubTasks = [taskAtCell getAllSubtasksWithinDepth:indentationUntilScreenOutOfBounds];
+    
+    Task *taskWeAreTryingToMoveUnderNeath = [self.taskHandler.tasksForTableView objectAtIndex:proposedDestinationIndexPath.row];
+    
+    NSIndexPath *okIndexPath;
+    if ([arrayOfSubTasks containsObject:taskWeAreTryingToMoveUnderNeath])
+    {
+        okIndexPath =  sourceIndexPath;
+    } else {
+        okIndexPath = proposedDestinationIndexPath;
+    }
+    
+    return okIndexPath;
+}
+
+
+
+-(IBAction)tempInsertObject
+{
+    NSLog(@"Inserting new task in temporary function");
+    Task *newTask = [NSEntityDescription
+                   insertNewObjectForEntityForName:@"Task"
+                   inManagedObjectContext:self.managedObjectContext];
+    
+    
+    newTask.title = [NSString stringWithFormat:@"Title %d",[[newTask getAnId] intValue]];
+    newTask.taskDescription = @"Desc1";
+
+    
+    [self.parentTask addSubtask:newTask atIndex:InsertTaskAtBeginning];
+    [self.managedObjectContext save:nil];    
+}
+
+#pragma mark -
+#pragma mark Set up Next View
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"Go to deeper task"])
+	{
+        ListTasksVC *listTasksVC = segue.destinationViewController;
+        listTasksVC.managedObjectContext = self.managedObjectContext;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Task *selectedTask = [self.taskHandler objectAtIndexPath:indexPath];
+        
+        listTasksVC.parentTask = selectedTask;
+        listTasksVC.title = selectedTask.title;
+        
+	} else if ([segue.identifier isEqualToString:@"Edit Task"])
+	{
+        UINavigationController *destinationNavCon = segue.destinationViewController;
+        
+        TaskViewController *editTaskVC = [destinationNavCon.viewControllers lastObject];
+        editTaskVC.managedObjectContext = self.managedObjectContext;
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        Task *selectedTask = [self.taskHandler objectAtIndexPath:indexPath];
+        
+        editTaskVC.taskToUse = selectedTask;
+        
+	} else if ([segue.identifier isEqualToString:@"Plan Tasks"])
+    {
+        UINavigationController *destinationNavCon = segue.destinationViewController;
+        ManageTaskPlanningVC *planGoal = [destinationNavCon.viewControllers lastObject];
+        Task *headTask = self.taskHandler.theHeadTask;
+        planGoal.goalToPlan = headTask;
+        
+    } else {
+        NSAssert1(nil,@"Should never be here, something is wrong with prepareForSegue", nil);
+    }
+}
+
+#pragma mark -
+#pragma mark TaskCellDelegate
+-(void)layoutSubviewsForAllVisibleCellsInTableviewWithAnimation:(BOOL)animated
+{
+    NSArray *arrayOfCells = self.tableView.visibleCells;
+    for (TaskCell *cell in arrayOfCells)
+    {
+        [cell indentToRightLevelsWithAnimation:animated];
+    }
+}
+
 
 @end

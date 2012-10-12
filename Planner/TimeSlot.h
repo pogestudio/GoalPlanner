@@ -2,7 +2,7 @@
 //  TimeSlot.h
 //  Planner
 //
-//  Created by Carl-Arvid Ewerbring on 9/16/12.
+//  Created by Carl-Arvid Ewerbring on 10/9/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -13,8 +13,8 @@
 
 @interface TimeSlot : NSManagedObject
 
-@property (nonatomic, retain) NSDate * endTime;
-@property (nonatomic, retain) NSDate * startTime;
+@property (nonatomic, retain) id endTime;
+@property (nonatomic, retain) id startTime;
 @property (nonatomic, retain) Schedule *ownerSchedule;
 
 @end

@@ -8,11 +8,22 @@
 
 #import <UIKit/UIKit.h>
 #import "CoreDataTableViewController.h"
+#import "TaskCell.h"
 
-@class Goal;
+@class Task;
+@class TaskHandler;
+@class TaskToolbar;
 
-@interface ListTasksVC : CoreDataTableViewController
+@interface ListTasksVC : UITableViewController <TaskCellDelegate>
 
-@property (strong, nonatomic) Goal *parentTask;
+@property (strong, nonatomic) Task *parentTask;
+@property (strong, nonatomic) TaskHandler *taskHandler;
+@property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+@property (nonatomic) BOOL shouldShowDeletion;
+
+@property (nonatomic, strong) IBOutlet TaskToolbar *toolbar;
+
+-(IBAction)tempInsertObject;
 
 @end

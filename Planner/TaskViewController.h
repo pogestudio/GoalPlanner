@@ -9,6 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "CoreDataTableViewController.h"
 
-@interface TaskViewController : CoreDataTableViewController
+@class Task;
+
+@interface TaskViewController : UITableViewController
+
+
+@property (strong, nonatomic) Task *taskToUse;
+@property (retain, nonatomic) NSManagedObjectContext *managedObjectContext;
+
+-(IBAction)userAsksToDismissView:(id)sender;
 
 @end

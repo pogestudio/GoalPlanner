@@ -2,14 +2,14 @@
 //  Schedule.h
 //  Planner
 //
-//  Created by Carl-Arvid Ewerbring on 9/16/12.
+//  Created by Carl-Arvid Ewerbring on 10/9/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class Goal, TimeSlot;
+@class Task, TimeSlot;
 
 @interface Schedule : NSManagedObject
 
@@ -23,7 +23,7 @@
 @property (nonatomic, retain) NSNumber * scheduleOnWeekdays;
 @property (nonatomic, retain) NSNumber * scheduleOnWeekends;
 @property (nonatomic, retain) NSDate * startDate;
-@property (nonatomic, retain) Goal *ownerSchedule;
+@property (nonatomic, retain) Task *ownerSchedule;
 @property (nonatomic, retain) NSOrderedSet *timeslots;
 @end
 

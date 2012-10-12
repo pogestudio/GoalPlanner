@@ -20,6 +20,8 @@
 #import "TimeRequiredCell.h"
 #import "SwitchControlCell.h"
 
+#import "Task.h"
+
 @interface TaskViewController ()
 -(void)setUpCell:(UITableViewCell*)cell forIndexPath:(NSIndexPath*)indexPath;
 -(UITableViewCell*)createCellForIndexPath:(NSIndexPath*)indexPath;
@@ -56,14 +58,9 @@ typedef enum {
 
 @implementation TaskViewController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+@synthesize taskToUse;
+@synthesize managedObjectContext;
+
 
 - (void)viewDidLoad
 {
@@ -298,6 +295,11 @@ typedef enum {
 -(void)setUpCell:(UITableViewCell *)cell forIndexPath:(NSIndexPath *)indexPath
 {
 
+}
+
+-(IBAction)userAsksToDismissView:(id)sender
+{
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 @end

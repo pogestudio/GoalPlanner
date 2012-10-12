@@ -12,7 +12,6 @@
 #import "ListTasksVC.h"
 
 #import "TempDatabaseBuilder.h"
-#import "Goal.h"
 #import "Task.h"
 
 @interface ListGoalsVC ()
@@ -82,10 +81,10 @@
     
     NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"sortKey" ascending:NO];
     
-    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Goal"];
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"Task"];
     [fetchRequest setSortDescriptors:[NSArray arrayWithObject:sortDescriptor]];
     
-    NSPredicate *fetchPred = [NSPredicate predicateWithFormat:@"id > 0"];
+    NSPredicate *fetchPred = [NSPredicate predicateWithFormat:@"isGoal == 1"];
     fetchRequest.predicate = fetchPred;
     
     
@@ -113,9 +112,9 @@
     static NSString *CellIdentifier = @"GoalCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    Goal *goalForCell = [self.fetchedResultsController objectAtIndexPath:indexPath];
+    Task *taskForCell = [self.fetchedResultsController objectAtIndexPath:indexPath];
     
-    cell.textLabel.text = goalForCell.title;
+    cell.textLabel.text = taskForCell.title;
     
     return cell;
 }
@@ -175,6 +174,7 @@
      // Pass the selected object to the new view controller.
      [self.navigationController pushViewController:detailViewController animated:YES];
      */
+    
 }
 
 - (void)setEditing:(BOOL)editing animated:(BOOL)animate
