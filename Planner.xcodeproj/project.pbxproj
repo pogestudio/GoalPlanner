@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A311184E1615EB6B00D990F0 /* TaskToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = A311184D1615EB6B00D990F0 /* TaskToolbar.m */; };
+		A315AE6F161CA76900A16CD2 /* EventKitUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A315AE6E161CA76900A16CD2 /* EventKitUI.framework */; };
+		A32B8C08160CBC6E00960316 /* TaskHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = A32B8C07160CBC6E00960316 /* TaskHandler.m */; };
+		A33E2FA91612698700866720 /* NSMutableArray+moveObject.m in Sources */ = {isa = PBXBuildFile; fileRef = A33E2FA81612698700866720 /* NSMutableArray+moveObject.m */; };
+		A342B409161B8E030034DFEB /* PLAvailableTimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = A342B408161B8E030034DFEB /* PLAvailableTimeSlot.m */; };
+		A342B40C161B900B0034DFEB /* PLScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = A342B40B161B900B0034DFEB /* PLScanner.m */; };
 		A346F10915FA98FB00745D9D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A346F10815FA98FB00745D9D /* UIKit.framework */; };
 		A346F10B15FA98FB00745D9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A346F10A15FA98FB00745D9D /* Foundation.framework */; };
 		A346F10D15FA98FB00745D9D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A346F10C15FA98FB00745D9D /* CoreGraphics.framework */; };
@@ -15,6 +21,17 @@
 		A346F11915FA98FB00745D9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A346F11815FA98FB00745D9D /* AppDelegate.m */; };
 		A346F11C15FA98FB00745D9D /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A346F11A15FA98FB00745D9D /* MainStoryboard.storyboard */; };
 		A346F12615FA990C00745D9D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A346F12515FA990C00745D9D /* CoreData.framework */; };
+		A350AC41161A3A6100B260AD /* ManageTaskPlanningVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A350AC40161A3A6100B260AD /* ManageTaskPlanningVC.m */; };
+		A350AC43161A3FC800B260AD /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A350AC42161A3FC800B260AD /* EventKit.framework */; };
+		A35C0E671624C5E600656AD1 /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = A35C0E661624C5E600656AD1 /* Task.m */; };
+		A35C0E6B1624C5E700656AD1 /* TimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = A35C0E6A1624C5E700656AD1 /* TimeSlot.m */; };
+		A35C0E6E1624C5E700656AD1 /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A35C0E6D1624C5E700656AD1 /* Schedule.m */; };
+		A35C0E741624D05D00656AD1 /* NSDate+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = A35C0E731624D05C00656AD1 /* NSDate+Compare.m */; };
+		A378E6221621BBD8004E36FF /* PLPLanner.m in Sources */ = {isa = PBXBuildFile; fileRef = A378E6211621BBD8004E36FF /* PLPLanner.m */; };
+		A378E6251621CBB4004E36FF /* FreeTimeCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = A378E6241621CBB4004E36FF /* FreeTimeCalculator.m */; };
+		A378E6281621CD2C004E36FF /* AvailableTimesContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = A378E6271621CD2C004E36FF /* AvailableTimesContainer.m */; };
+		A378E62B162219A2004E36FF /* PLSchedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A378E62A162219A2004E36FF /* PLSchedule.m */; };
+		A378E62E16221C8D004E36FF /* PossibleEventsStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = A378E62D16221C8C004E36FF /* PossibleEventsStorage.m */; };
 		A3BCEB9E160336E500B797CD /* SwitchControlCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEB9D160336E500B797CD /* SwitchControlCell.m */; };
 		A3BCEBA216033A8800B797CD /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBA116033A8800B797CD /* CoreDataTableViewController.m */; };
 		A3BCEBA51603405F00B797CD /* ListTasksVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBA41603405F00B797CD /* ListTasksVC.m */; };
@@ -22,19 +39,31 @@
 		A3BCEBAC1603551600B797CD /* Planner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBAA1603551500B797CD /* Planner.xcdatamodeld */; };
 		A3BCEBB01603564400B797CD /* ScheduleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBAF1603564400B797CD /* ScheduleCell.m */; };
 		A3BCEBB4160361E000B797CD /* ListGoalsVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BCEBB3160361E000B797CD /* ListGoalsVC.m */; };
+		A3C0E6CE1626258E000FFABD /* TimeSlot+ComponentHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C0E6CD1626258E000FFABD /* TimeSlot+ComponentHelper.m */; };
+		A3C0E6D216262929000FFABD /* Schedule+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C0E6D116262929000FFABD /* Schedule+helper.m */; };
+		A3C0E6D81626368E000FFABD /* NSDateComponents+Compare.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C0E6D71626368E000FFABD /* NSDateComponents+Compare.m */; };
+		A3C3AA53161F8A8600A93078 /* PLEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C3AA52161F8A8600A93078 /* PLEvent.m */; };
+		A3C3AA7B1620F00200A93078 /* PLOfTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C3AA7A1620F00100A93078 /* PLOfTasks.m */; };
 		A3C9CEFC1605FB8B002B6CFA /* TempDatabaseBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CEFB1605FB8B002B6CFA /* TempDatabaseBuilder.m */; };
-		A3C9CF1C16063175002B6CFA /* Goal+addTasks.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF1B16063175002B6CFA /* Goal+addTasks.m */; };
-		A3C9CF231606556C002B6CFA /* Goal.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF221606556C002B6CFA /* Goal.m */; };
-		A3C9CF261606556D002B6CFA /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF251606556D002B6CFA /* Schedule.m */; };
-		A3C9CF291606556D002B6CFA /* TimeSlot.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF281606556D002B6CFA /* TimeSlot.m */; };
-		A3C9CF2C1606556D002B6CFA /* Task.m in Sources */ = {isa = PBXBuildFile; fileRef = A3C9CF2B1606556D002B6CFA /* Task.m */; };
 		A3E102701602787C00EED9A8 /* TaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1026F1602787C00EED9A8 /* TaskViewController.m */; };
 		A3E10276160280AB00EED9A8 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E10275160280AB00EED9A8 /* TitleCell.m */; };
 		A3E1027916028BFA00EED9A8 /* DescriptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1027816028BFA00EED9A8 /* DescriptionCell.m */; };
 		A3E1027D160295C200EED9A8 /* TimeRequiredCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3E1027C160295C200EED9A8 /* TimeRequiredCell.m */; };
+		A3EC78CF16076D120029D3B3 /* Task+helper.m in Sources */ = {isa = PBXBuildFile; fileRef = A3EC78CE16076D120029D3B3 /* Task+helper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A311184C1615EB6B00D990F0 /* TaskToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskToolbar.h; sourceTree = "<group>"; };
+		A311184D1615EB6B00D990F0 /* TaskToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskToolbar.m; sourceTree = "<group>"; };
+		A315AE6E161CA76900A16CD2 /* EventKitUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKitUI.framework; path = System/Library/Frameworks/EventKitUI.framework; sourceTree = SDKROOT; };
+		A32B8C06160CBC6E00960316 /* TaskHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskHandler.h; sourceTree = "<group>"; };
+		A32B8C07160CBC6E00960316 /* TaskHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskHandler.m; sourceTree = "<group>"; };
+		A33E2FA71612698700866720 /* NSMutableArray+moveObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+moveObject.h"; sourceTree = "<group>"; };
+		A33E2FA81612698700866720 /* NSMutableArray+moveObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+moveObject.m"; sourceTree = "<group>"; };
+		A342B407161B8E030034DFEB /* PLAvailableTimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLAvailableTimeSlot.h; sourceTree = "<group>"; };
+		A342B408161B8E030034DFEB /* PLAvailableTimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLAvailableTimeSlot.m; sourceTree = "<group>"; };
+		A342B40A161B900B0034DFEB /* PLScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLScanner.h; sourceTree = "<group>"; };
+		A342B40B161B900B0034DFEB /* PLScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLScanner.m; sourceTree = "<group>"; };
 		A346F10415FA98FB00745D9D /* Planner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Planner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A346F10815FA98FB00745D9D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A346F10A15FA98FB00745D9D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +76,27 @@
 		A346F11815FA98FB00745D9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		A346F11B15FA98FB00745D9D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		A346F12515FA990C00745D9D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A350AC3F161A3A6100B260AD /* ManageTaskPlanningVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTaskPlanningVC.h; sourceTree = "<group>"; };
+		A350AC40161A3A6100B260AD /* ManageTaskPlanningVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTaskPlanningVC.m; sourceTree = "<group>"; };
+		A350AC42161A3FC800B260AD /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		A35C0E651624C5E600656AD1 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		A35C0E661624C5E600656AD1 /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
+		A35C0E691624C5E700656AD1 /* TimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSlot.h; sourceTree = "<group>"; };
+		A35C0E6A1624C5E700656AD1 /* TimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeSlot.m; sourceTree = "<group>"; };
+		A35C0E6C1624C5E700656AD1 /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
+		A35C0E6D1624C5E700656AD1 /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
+		A35C0E721624D05C00656AD1 /* NSDate+Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Compare.h"; sourceTree = "<group>"; };
+		A35C0E731624D05C00656AD1 /* NSDate+Compare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Compare.m"; sourceTree = "<group>"; };
+		A36002F9162843E900828784 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		A378E6201621BBD8004E36FF /* PLPLanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLPLanner.h; sourceTree = "<group>"; };
+		A378E6211621BBD8004E36FF /* PLPLanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLPLanner.m; sourceTree = "<group>"; };
+		A378E6241621CBB4004E36FF /* FreeTimeCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FreeTimeCalculator.m; sourceTree = "<group>"; };
+		A378E6261621CD2C004E36FF /* AvailableTimesContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AvailableTimesContainer.h; sourceTree = "<group>"; };
+		A378E6271621CD2C004E36FF /* AvailableTimesContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AvailableTimesContainer.m; sourceTree = "<group>"; };
+		A378E629162219A2004E36FF /* PLSchedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLSchedule.h; sourceTree = "<group>"; };
+		A378E62A162219A2004E36FF /* PLSchedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLSchedule.m; sourceTree = "<group>"; };
+		A378E62C16221C8C004E36FF /* PossibleEventsStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PossibleEventsStorage.h; sourceTree = "<group>"; };
+		A378E62D16221C8C004E36FF /* PossibleEventsStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PossibleEventsStorage.m; sourceTree = "<group>"; };
 		A3BCEB9C160336E500B797CD /* SwitchControlCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwitchControlCell.h; sourceTree = "<group>"; };
 		A3BCEB9D160336E500B797CD /* SwitchControlCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwitchControlCell.m; sourceTree = "<group>"; };
 		A3BCEBA016033A8800B797CD /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataTableViewController.h; sourceTree = "<group>"; };
@@ -60,18 +110,19 @@
 		A3BCEBAF1603564400B797CD /* ScheduleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleCell.m; sourceTree = "<group>"; };
 		A3BCEBB2160361E000B797CD /* ListGoalsVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListGoalsVC.h; sourceTree = "<group>"; };
 		A3BCEBB3160361E000B797CD /* ListGoalsVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListGoalsVC.m; sourceTree = "<group>"; };
+		A3C0E6CC1626258E000FFABD /* TimeSlot+ComponentHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TimeSlot+ComponentHelper.h"; sourceTree = "<group>"; };
+		A3C0E6CD1626258E000FFABD /* TimeSlot+ComponentHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TimeSlot+ComponentHelper.m"; sourceTree = "<group>"; };
+		A3C0E6D016262929000FFABD /* Schedule+helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Schedule+helper.h"; sourceTree = "<group>"; };
+		A3C0E6D116262929000FFABD /* Schedule+helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Schedule+helper.m"; sourceTree = "<group>"; };
+		A3C0E6D61626368E000FFABD /* NSDateComponents+Compare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateComponents+Compare.h"; sourceTree = "<group>"; };
+		A3C0E6D71626368E000FFABD /* NSDateComponents+Compare.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateComponents+Compare.m"; sourceTree = "<group>"; };
+		A3C3AA51161F8A8600A93078 /* PLEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLEvent.h; sourceTree = "<group>"; };
+		A3C3AA52161F8A8600A93078 /* PLEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLEvent.m; sourceTree = "<group>"; };
+		A3C3AA761620AFF100A93078 /* FreeTimeCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FreeTimeCalculator.h; sourceTree = "<group>"; };
+		A3C3AA791620F00100A93078 /* PLOfTasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PLOfTasks.h; sourceTree = "<group>"; };
+		A3C3AA7A1620F00100A93078 /* PLOfTasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PLOfTasks.m; sourceTree = "<group>"; };
 		A3C9CEFA1605FB8B002B6CFA /* TempDatabaseBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TempDatabaseBuilder.h; sourceTree = "<group>"; };
 		A3C9CEFB1605FB8B002B6CFA /* TempDatabaseBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TempDatabaseBuilder.m; sourceTree = "<group>"; };
-		A3C9CF1A16063175002B6CFA /* Goal+addTasks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Goal+addTasks.h"; sourceTree = "<group>"; };
-		A3C9CF1B16063175002B6CFA /* Goal+addTasks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Goal+addTasks.m"; sourceTree = "<group>"; };
-		A3C9CF211606556C002B6CFA /* Goal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Goal.h; sourceTree = "<group>"; };
-		A3C9CF221606556C002B6CFA /* Goal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Goal.m; sourceTree = "<group>"; };
-		A3C9CF241606556D002B6CFA /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Schedule.h; sourceTree = "<group>"; };
-		A3C9CF251606556D002B6CFA /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Schedule.m; sourceTree = "<group>"; };
-		A3C9CF271606556D002B6CFA /* TimeSlot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeSlot.h; sourceTree = "<group>"; };
-		A3C9CF281606556D002B6CFA /* TimeSlot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeSlot.m; sourceTree = "<group>"; };
-		A3C9CF2A1606556D002B6CFA /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
-		A3C9CF2B1606556D002B6CFA /* Task.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Task.m; sourceTree = "<group>"; };
 		A3E1026E1602787C00EED9A8 /* TaskViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskViewController.h; sourceTree = "<group>"; };
 		A3E1026F1602787C00EED9A8 /* TaskViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskViewController.m; sourceTree = "<group>"; };
 		A3E10274160280AB00EED9A8 /* TitleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
@@ -80,6 +131,8 @@
 		A3E1027816028BFA00EED9A8 /* DescriptionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DescriptionCell.m; sourceTree = "<group>"; };
 		A3E1027B160295C200EED9A8 /* TimeRequiredCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeRequiredCell.h; sourceTree = "<group>"; };
 		A3E1027C160295C200EED9A8 /* TimeRequiredCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeRequiredCell.m; sourceTree = "<group>"; };
+		A3EC78CD16076D120029D3B3 /* Task+helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Task+helper.h"; sourceTree = "<group>"; };
+		A3EC78CE16076D120029D3B3 /* Task+helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Task+helper.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +140,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A315AE6F161CA76900A16CD2 /* EventKitUI.framework in Frameworks */,
+				A350AC43161A3FC800B260AD /* EventKit.framework in Frameworks */,
 				A346F12615FA990C00745D9D /* CoreData.framework in Frameworks */,
 				A346F10915FA98FB00745D9D /* UIKit.framework in Frameworks */,
 				A346F10B15FA98FB00745D9D /* Foundation.framework in Frameworks */,
@@ -97,9 +152,59 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32B8C04160CBC5B00960316 /* CustomClasses */ = {
+			isa = PBXGroup;
+			children = (
+				A342B3FF161B85BC0034DFEB /* Booking */,
+				A342B3FD161B85AF0034DFEB /* ViewRelated */,
+			);
+			name = CustomClasses;
+			sourceTree = "<group>";
+		};
+		A342B3FD161B85AF0034DFEB /* ViewRelated */ = {
+			isa = PBXGroup;
+			children = (
+				A32B8C06160CBC6E00960316 /* TaskHandler.h */,
+				A32B8C07160CBC6E00960316 /* TaskHandler.m */,
+				A33E2FA71612698700866720 /* NSMutableArray+moveObject.h */,
+				A33E2FA81612698700866720 /* NSMutableArray+moveObject.m */,
+				A311184C1615EB6B00D990F0 /* TaskToolbar.h */,
+				A311184D1615EB6B00D990F0 /* TaskToolbar.m */,
+			);
+			name = ViewRelated;
+			sourceTree = "<group>";
+		};
+		A342B3FF161B85BC0034DFEB /* Booking */ = {
+			isa = PBXGroup;
+			children = (
+				A342B400161B8D710034DFEB /* Scanning calendar */,
+			);
+			name = Booking;
+			sourceTree = "<group>";
+		};
+		A342B400161B8D710034DFEB /* Scanning calendar */ = {
+			isa = PBXGroup;
+			children = (
+				A378E6201621BBD8004E36FF /* PLPLanner.h */,
+				A378E6211621BBD8004E36FF /* PLPLanner.m */,
+				A3C3AA751620AFDB00A93078 /* FreeTimeTree */,
+				A342B40A161B900B0034DFEB /* PLScanner.h */,
+				A342B40B161B900B0034DFEB /* PLScanner.m */,
+				A3C3AA51161F8A8600A93078 /* PLEvent.h */,
+				A3C3AA52161F8A8600A93078 /* PLEvent.m */,
+				A3C3AA791620F00100A93078 /* PLOfTasks.h */,
+				A3C3AA7A1620F00100A93078 /* PLOfTasks.m */,
+				A378E629162219A2004E36FF /* PLSchedule.h */,
+				A378E62A162219A2004E36FF /* PLSchedule.m */,
+			);
+			name = "Scanning calendar";
+			sourceTree = "<group>";
+		};
 		A346F0F915FA98FB00745D9D = {
 			isa = PBXGroup;
 			children = (
+				A315AE6E161CA76900A16CD2 /* EventKitUI.framework */,
+				A350AC42161A3FC800B260AD /* EventKit.framework */,
 				A346F12515FA990C00745D9D /* CoreData.framework */,
 				A346F10E15FA98FB00745D9D /* Planner */,
 				A346F10715FA98FB00745D9D /* Frameworks */,
@@ -128,8 +233,11 @@
 		A346F10E15FA98FB00745D9D /* Planner */ = {
 			isa = PBXGroup;
 			children = (
+				A32B8C04160CBC5B00960316 /* CustomClasses */,
 				A3BCEBAD1603552200B797CD /* CoreDataStuff */,
 				A3E1027216027F9300EED9A8 /* Views */,
+				A3C9CEFA1605FB8B002B6CFA /* TempDatabaseBuilder.h */,
+				A3C9CEFB1605FB8B002B6CFA /* TempDatabaseBuilder.m */,
 				A346F11715FA98FB00745D9D /* AppDelegate.h */,
 				A346F11815FA98FB00745D9D /* AppDelegate.m */,
 				A346F11A15FA98FB00745D9D /* MainStoryboard.storyboard */,
@@ -145,8 +253,18 @@
 				A346F11115FA98FB00745D9D /* InfoPlist.strings */,
 				A346F11415FA98FB00745D9D /* main.m */,
 				A346F11615FA98FB00745D9D /* Planner-Prefix.pch */,
+				A36002F9162843E900828784 /* Constants.h */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A350AC3D161A3A2B00B260AD /* PlanTasks */ = {
+			isa = PBXGroup;
+			children = (
+				A350AC3F161A3A6100B260AD /* ManageTaskPlanningVC.h */,
+				A350AC40161A3A6100B260AD /* ManageTaskPlanningVC.m */,
+			);
+			name = PlanTasks;
 			sourceTree = "<group>";
 		};
 		A3BCEBA61603419500B797CD /* ListTasks */ = {
@@ -164,16 +282,18 @@
 			isa = PBXGroup;
 			children = (
 				A3BCEBAA1603551500B797CD /* Planner.xcdatamodeld */,
-				A3C9CF1A16063175002B6CFA /* Goal+addTasks.h */,
-				A3C9CF1B16063175002B6CFA /* Goal+addTasks.m */,
-				A3C9CF211606556C002B6CFA /* Goal.h */,
-				A3C9CF221606556C002B6CFA /* Goal.m */,
-				A3C9CF241606556D002B6CFA /* Schedule.h */,
-				A3C9CF251606556D002B6CFA /* Schedule.m */,
-				A3C9CF271606556D002B6CFA /* TimeSlot.h */,
-				A3C9CF281606556D002B6CFA /* TimeSlot.m */,
-				A3C9CF2A1606556D002B6CFA /* Task.h */,
-				A3C9CF2B1606556D002B6CFA /* Task.m */,
+				A3EC78CD16076D120029D3B3 /* Task+helper.h */,
+				A3EC78CE16076D120029D3B3 /* Task+helper.m */,
+				A35C0E651624C5E600656AD1 /* Task.h */,
+				A35C0E661624C5E600656AD1 /* Task.m */,
+				A35C0E691624C5E700656AD1 /* TimeSlot.h */,
+				A35C0E6A1624C5E700656AD1 /* TimeSlot.m */,
+				A35C0E6C1624C5E700656AD1 /* Schedule.h */,
+				A35C0E6D1624C5E700656AD1 /* Schedule.m */,
+				A3C0E6CC1626258E000FFABD /* TimeSlot+ComponentHelper.h */,
+				A3C0E6CD1626258E000FFABD /* TimeSlot+ComponentHelper.m */,
+				A3C0E6D016262929000FFABD /* Schedule+helper.h */,
+				A3C0E6D116262929000FFABD /* Schedule+helper.m */,
 			);
 			name = CoreDataStuff;
 			sourceTree = "<group>";
@@ -187,28 +307,46 @@
 			name = ListGoals;
 			sourceTree = "<group>";
 		};
+		A3C3AA751620AFDB00A93078 /* FreeTimeTree */ = {
+			isa = PBXGroup;
+			children = (
+				A342B407161B8E030034DFEB /* PLAvailableTimeSlot.h */,
+				A342B408161B8E030034DFEB /* PLAvailableTimeSlot.m */,
+				A3C3AA761620AFF100A93078 /* FreeTimeCalculator.h */,
+				A378E6241621CBB4004E36FF /* FreeTimeCalculator.m */,
+				A378E6261621CD2C004E36FF /* AvailableTimesContainer.h */,
+				A378E6271621CD2C004E36FF /* AvailableTimesContainer.m */,
+				A378E62C16221C8C004E36FF /* PossibleEventsStorage.h */,
+				A378E62D16221C8C004E36FF /* PossibleEventsStorage.m */,
+				A35C0E721624D05C00656AD1 /* NSDate+Compare.h */,
+				A35C0E731624D05C00656AD1 /* NSDate+Compare.m */,
+				A3C0E6D61626368E000FFABD /* NSDateComponents+Compare.h */,
+				A3C0E6D71626368E000FFABD /* NSDateComponents+Compare.m */,
+			);
+			name = FreeTimeTree;
+			sourceTree = "<group>";
+		};
 		A3E1027216027F9300EED9A8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				A350AC3D161A3A2B00B260AD /* PlanTasks */,
 				A3BCEBA016033A8800B797CD /* CoreDataTableViewController.h */,
 				A3BCEBA116033A8800B797CD /* CoreDataTableViewController.m */,
 				A3BCEBB1160361CC00B797CD /* ListGoals */,
 				A3BCEBA61603419500B797CD /* ListTasks */,
-				A3E1027316027FBE00EED9A8 /* Configure Tasks */,
-				A3C9CEFA1605FB8B002B6CFA /* TempDatabaseBuilder.h */,
-				A3C9CEFB1605FB8B002B6CFA /* TempDatabaseBuilder.m */,
+				A3E1027316027FBE00EED9A8 /* Edit Tasks */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
-		A3E1027316027FBE00EED9A8 /* Configure Tasks */ = {
+		A3E1027316027FBE00EED9A8 /* Edit Tasks */ = {
 			isa = PBXGroup;
 			children = (
 				A3E1027A16028C0000EED9A8 /* Cells */,
 				A3E1026E1602787C00EED9A8 /* TaskViewController.h */,
 				A3E1026F1602787C00EED9A8 /* TaskViewController.m */,
 			);
-			name = "Configure Tasks";
+			name = "Edit Tasks";
 			sourceTree = "<group>";
 		};
 		A3E1027A16028C0000EED9A8 /* Cells */ = {
@@ -304,11 +442,27 @@
 				A3BCEBB01603564400B797CD /* ScheduleCell.m in Sources */,
 				A3BCEBB4160361E000B797CD /* ListGoalsVC.m in Sources */,
 				A3C9CEFC1605FB8B002B6CFA /* TempDatabaseBuilder.m in Sources */,
-				A3C9CF1C16063175002B6CFA /* Goal+addTasks.m in Sources */,
-				A3C9CF231606556C002B6CFA /* Goal.m in Sources */,
-				A3C9CF261606556D002B6CFA /* Schedule.m in Sources */,
-				A3C9CF291606556D002B6CFA /* TimeSlot.m in Sources */,
-				A3C9CF2C1606556D002B6CFA /* Task.m in Sources */,
+				A3EC78CF16076D120029D3B3 /* Task+helper.m in Sources */,
+				A32B8C08160CBC6E00960316 /* TaskHandler.m in Sources */,
+				A33E2FA91612698700866720 /* NSMutableArray+moveObject.m in Sources */,
+				A311184E1615EB6B00D990F0 /* TaskToolbar.m in Sources */,
+				A350AC41161A3A6100B260AD /* ManageTaskPlanningVC.m in Sources */,
+				A342B409161B8E030034DFEB /* PLAvailableTimeSlot.m in Sources */,
+				A342B40C161B900B0034DFEB /* PLScanner.m in Sources */,
+				A3C3AA53161F8A8600A93078 /* PLEvent.m in Sources */,
+				A3C3AA7B1620F00200A93078 /* PLOfTasks.m in Sources */,
+				A378E6221621BBD8004E36FF /* PLPLanner.m in Sources */,
+				A378E6251621CBB4004E36FF /* FreeTimeCalculator.m in Sources */,
+				A378E6281621CD2C004E36FF /* AvailableTimesContainer.m in Sources */,
+				A378E62B162219A2004E36FF /* PLSchedule.m in Sources */,
+				A378E62E16221C8D004E36FF /* PossibleEventsStorage.m in Sources */,
+				A35C0E671624C5E600656AD1 /* Task.m in Sources */,
+				A35C0E6B1624C5E700656AD1 /* TimeSlot.m in Sources */,
+				A35C0E6E1624C5E700656AD1 /* Schedule.m in Sources */,
+				A35C0E741624D05D00656AD1 /* NSDate+Compare.m in Sources */,
+				A3C0E6CE1626258E000FFABD /* TimeSlot+ComponentHelper.m in Sources */,
+				A3C0E6D216262929000FFABD /* Schedule+helper.m in Sources */,
+				A3C0E6D81626368E000FFABD /* NSDateComponents+Compare.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
